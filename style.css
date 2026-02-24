@@ -9,6 +9,9 @@
       font-family: 'Times New Roman', sans-serif;
       background-color: whitesmoke;
       color: black;
+    /* scroll-behavior smooth para que al pulsar un enlace del navbar baje suavemente */
+
+      scroll-behavior: smooth;
     }
 
     /* HEADER */
@@ -105,6 +108,66 @@
     .boton-cv:hover {
       background-color: var(--morado-oscuro);
       color: white;
+    }
+
+    /*  NAVBAR  */
+    /* sticky-top de Bootstrap hace que el navbar se quede fijo al hacer scroll, pero necesitamos darle nuestros colores */
+    .navbar-custom {
+      background-color: var(--morado-oscuro);
+      /* Le añadimos una sombra para que visualmente se note que "flota" sobre el contenido */
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+
+    .navbar-custom .nav-link {
+      color: rgba(255, 255, 255, 0.671) ;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .navbar-custom .nav-link:hover{
+      color: var(--morado-claro);
+    }
+
+    /* Le damos a lo que sería el logo y nuestro titulo un tamaño distinto y una fuente distinta */
+    .navbar-custom .navbar-brand {
+      color: white ;
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+    }
+
+    /* Al menu desplegable que aparece en pantallas pequeñas(moviles, vamos) también necesita color personalizado */
+    .navbar-custom .navbar-toggler {
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    /*  TECNOLOGÍAS  */
+    /* Cada tarjeta de tecnología tendrá un hover que la eleve un poquito aplicando transform, quitando el hover no hay nada
+    llamativo en su configuración */
+    .tecnologias {
+      background: white;
+      border: 1.5px solid var(--morado-claro);
+      border-radius: 10px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--morado-oscuro);
+    }
+    
+    .tecnologias:hover {
+      /* Ponemos transition para el efecto hover y box-shadow para que se aplique en el mismo tiempo*/
+      transition: transform 0.18s, box-shadow 0.18s;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(139,0,139,0.13);
+    }
+
+    .tecnologias img {
+      width: 28px;
+      height: 28px;
+      object-fit: contain;
     }
 
     /*  FOOTER  */
